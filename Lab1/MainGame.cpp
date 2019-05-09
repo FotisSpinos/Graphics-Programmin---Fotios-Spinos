@@ -213,7 +213,7 @@ void MainGame::drawGame()
 	shaderExplosion.Bind();
 	updateExplosionShader(transform.GetModel());
 
-	//mesh1.draw();
+	mesh1.draw();
 
 	// object 2
 	transform.SetPos(glm::vec3(sinf(counter), 0.2, 0.0));
@@ -223,7 +223,7 @@ void MainGame::drawGame()
 	shaderReflection.Bind();
 	updateReflectionShader();
 
-	//mesh2.draw();
+	mesh2.draw();
 
 	// object 3
 	transform.SetPos(glm::vec3(-0.2, 0.2, 0.2));	//sinf(counter)

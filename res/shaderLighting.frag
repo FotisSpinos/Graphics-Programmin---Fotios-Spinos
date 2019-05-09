@@ -67,6 +67,8 @@ void main()
 	vec3 s = specular(lightDir, GeometryOutput.v_norm, GeometryOutput.v_pos) * distF;
 	vec3 d = diffuse(lightDir, GeometryOutput.v_norm) * distF;
 
+	vec4 lightColor = vec4((a + d + s), 1.0);
+
 	vec4 texture1Color = texture2D(texture1, GeometryOutput.v_coord) * texCont1;
 	vec4 texture2Color = texture2D(texture2, GeometryOutput.v_coord) * texCont2;
 
